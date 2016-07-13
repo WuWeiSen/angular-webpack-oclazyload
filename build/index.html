@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body ng-controller="MainCtrl">
+    <div class="app layout-fixed-header">
+        <!-- sidebar panel -->
+        <div class="sidebar-panel offscreen-left">
+            <div class="brand">
+                <!-- logo -->
+                <div class="brand-logo">
+                    <img ng-src="{{ vm.logo }}" height="15" alt="">
+                </div>
+            </div>
+            <nav role="navigation">
+                <ul class="nav">
+                    <li ui-sref-active="open">
+                        <a ui-sref="profile.index.info">
+                            <i class="fa fa-user"></i>
+                            <span>个人资料</span>
+                        </a>
+                    </li>
+                    <li ui-sref="ent" ui-sref-active="open">
+                        <a href="javascript:;">
+                            <i class="fa fa-cog"></i>
+                            <span>企业管理</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main-panel">
+            <div class="main-content" ui-view>
+            </div>
+        </div>
+    </div>
+    <script src="assets/bundle.js"></script>
+</body>
+
+</html>
