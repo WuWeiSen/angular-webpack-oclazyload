@@ -4,6 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <style>
+    .loading-mask {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        z-index: 999;
+        top: 0;
+        text-align: center;
+        padding-top: 20%;
+        background-color: #fff;
+    }
+    </style>
 </head>
 
 <body ng-controller="MainCtrl">
@@ -35,6 +48,10 @@
         </div>
         <div class="main-panel">
             <div class="main-content" ui-view>
+                <div class="loading-mask">
+                    <img ng-src="{{ vm.loadImg }}" alt="">
+                    <p>加载中...</p>
+                </div>
             </div>
         </div>
     </div>

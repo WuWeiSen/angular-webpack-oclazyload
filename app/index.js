@@ -65,7 +65,8 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 }]);
 app.controller('MainCtrl', ['$scope', '$state', '$location', function($scope, $state, $location) {
     var vm = $scope.vm = {
-        logo: require('./img/logo.png')
+        logo: require('./img/logo.png'),
+        loadImg: require('./img/loading.gif')
     };
     var _methods = {
     };

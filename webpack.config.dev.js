@@ -20,7 +20,7 @@ module.exports = {
             loader: 'style!css!sass',
             exclude: /node_modules/
         }, {
-            test: /\.(png|jpg|woff|svg|ttf|eot)/,
+            test: /\.(png|jpg|gif|woff|svg|ttf|eot)/,
             loader: 'url?limit=100000',
             exclude: /node_modules/
         }, {
